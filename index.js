@@ -6,6 +6,6 @@ const mainRouter = require('./mainRoutes')
 // Use new router:
 app.use(mainRouter)
 
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 app.listen(port)
 console.log('Express server running on port 3000')
