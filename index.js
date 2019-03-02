@@ -1,16 +1,7 @@
 const path = require('path')
 const express = require('express')
 const app = express()
-const mainRouter = express.Router()
-
-mainRouter.get('/', function (req, res) {
-  res.send('Hello World')
-})
-
-// Route to about page:
-mainRouter.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname, 'views', 'about.html'))
-})
+const mainRouter = require('./mainRoutes')
 
 // Use new router:
 app.use(mainRouter)
